@@ -14,7 +14,7 @@ model=joblib.load(model_path)
 
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/predict', methods=['GET', 'POST'])
 def iris():
     if request.method == 'POST':
             sepal_length = float(request.json['sepal_length'])
